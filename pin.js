@@ -26,8 +26,8 @@ const bton=document.getElementById('keypad').addEventListener('click',function(e
         calcInput.value = newNumber;
     }
 })
+let count=0;
 function verify() {
-    console.log(254)
     let dbtn=document.getElementById("display1").value;
     let gbtn=document.getElementById('random').value;
     const ns=document.getElementById('ns');
@@ -37,10 +37,16 @@ function verify() {
         ns.style.display='block';
         nf.style.display='none';
 
-    }
+    }=
     else{
         nf.style.display='block';
         ns.style.display='none';
+        count++;
+    }
+    if(count<=3)
+    {
+        document.getElementById('error').innerHTML=3-count+" try left";
+
     }
     
 }
